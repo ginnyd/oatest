@@ -1,0 +1,19 @@
+<% if user_signed_in? %>
+  <li>
+  Logged in as <%= current_user.name %>
+  </li>
+  <li>
+  <%= link_to('Logout', signout_path) %>        
+  </li>
+  <% else %>
+  <li>
+    <a href="/auth/twitter"><img src="https://twitter.com/images/three_circles/twitter-bird-blue-on-white.png" width="80" alt="Twitter" title="Twitter" border="0" /></a>
+    <a href="/auth/github"><img src="https://github.com/github/media/blob/master/octocats/octocat.png?raw=true" width="80" alt="GitHub" title="GitHub" border="0" /></a>
+    <a href="/auth/stackexchange"><img src="http://cdn.sstatic.net/stackexchange/img/logos/se/se-icon.png" width="80" alt="Stack Exchange" title="Stack Exchange" border="0" /></a>
+    <a href="/auth/stackexchange"><img src="http://cdn.sstatic.net/stackexchange/img/logos/so/so-icon.png" width="80" alt="Stack Overflow" title="Stack Overflow" border="0" /></a>
+    <a href="/auth/stackexchange"><img src="http://cdn.sstatic.net/stackexchange/img/logos/sf/sf-icon.png" width="80" alt="Server Fault" title="Server Fault" border="0" /></a>
+    <a href="/auth/stackexchange"><img src="http://cdn.sstatic.net/stackexchange/img/logos/su/su-icon.png" width="80" alt="Super User" title="Super User" border="0" /></a> 
+  </li>
+
+
+<% end %>
